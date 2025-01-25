@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle {
+            background-color:#8a2be2;
+            border-radius: 400px;
+            height: 200px;
+            width: 200px;
+            margin: auto;
+            transition: 1s;
+        }
+        
+        /* .circle {
+        width: 100px;
+        border-radius: 50px;
+        background-color: purple;
+        padding: 50px 0;
+        light-height: 0px;
+        text-align: center;
+        margins: 0 auto;
+        }
+        */
+
+        p {
+            color: #ffffff;
+            padding-top: 90px;
+            padding-bottom: 90px;
+            padding-left: 65px;
+        }
+
+        .circle:hover {
+            transform: rotate(360deg);
+            background-color: #311d45;
+        }
+        .scooter {
+            margin-top: 100px;
+            animation-name: scoot;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+        }
+
+        /* could use position: absolute and margin-left: -100px so he starts off the screen */
+
+        @keyframes scoot {
+            from {transform: translateX(-400px);}
+            to {transform: translateX(2000px);}
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <p>Go Orange!</p>
+    </div>
+    <img class="scooter" src="https://laferger.github.io/ist363/images/otto-on-skateboard.png" alt="Otto Orange mascot on a scooter">
+</body>
+</html>
