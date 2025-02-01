@@ -1,0 +1,39 @@
+@import "reset"; //can import files, imported files get included with the code - modular, goes at the top
+
+$heading_color: #571e57; //vairables - make up names, put them in the css you write
+$main-font: arial, helvetica, sans-serif;
+$body_color: #ffcb6b;
+
+h1 {
+    color: $heading-color;
+}
+
+nav {
+    a{color: #ffffff;} //shows descendent selector - goes inside of brackets
+}
+
+@mixin warning {     //mixins = save snippets of CSS to reuse over and over
+    color: #901c1c;
+    font-size: 1.5em;
+}
+
+.danger {
+    @include warning;
+    background-color: #000000;
+}
+
+// extend to share a set of CSS properties from one selector to another
+.jumbotron {
+    width: 100%;
+    background-color: #ffd9df;
+    border: 2px solid #be33ce;
+}
+
+.jumbotron_about {
+    @extend .jumbotron;
+    color: #000000;
+}
+
+body {
+    background-color: $body_color;
+}
