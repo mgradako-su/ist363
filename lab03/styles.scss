@@ -49,8 +49,17 @@ h3 {
         margin: 10px;
         padding-right: 40px;
     }
-    flex-wrap: wrap;
+    flex-direction: row;
 }
+
+@media (max-width: 800px) {
+    .recipes-cards {
+      flex-direction: column;
+    }
+    .tile {
+        flex: 100%;
+    }
+  }
 
 .tile {
     img {
@@ -59,7 +68,7 @@ h3 {
     }
     box-shadow: 0px 0px 5px 1px #cfcbcb;
     border-radius: 10px;
-    max-width: 20%;
+    flex: 20%;
     margin: 10px;
     h3 {
         margin: 10px;
