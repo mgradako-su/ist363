@@ -78,12 +78,6 @@ h3 {
     }
 }
 
-.big-pic {
-    max-width: 98.5%;
-    margin: 10px;
-
-}
-
 .button-style {
     color: #ffffff;
     background-color: $header-color;
@@ -107,6 +101,12 @@ h3 {
     button {
         @extend .button-style;
     }
+}
+
+.big-pic {
+    max-width: 98.5%;
+    margin: 10px;
+
 }
 
 .about-us {

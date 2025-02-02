@@ -175,11 +175,6 @@ h3 {
   padding-bottom: 30px;
 }
 
-.big-pic {
-  max-width: 98.5%;
-  margin: 10px;
-}
-
 .button-style, .about-us button, .banner button {
   color: #ffffff;
   background-color: #e89b6a;
@@ -202,6 +197,11 @@ h3 {
   border-color: #e89b6a;
   width: 250px;
 }
+.big-pic {
+  max-width: 98.5%;
+  margin: 10px;
+}
+
 .about-us {
   padding: 20px;
   text-align: center;
