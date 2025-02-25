@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples</title>
+    <script src="example.js"></script> <!-- include an external file -->
+</head>
+<body>
+    <!-- this is how you include js internally, anywhere in html file -->
+   <script>
+    // dog years
+    let dogAge = 14;
+    let type = "cat";
+    let petAge; // need to define variable before you can use it
+    if (type == "dog") {
+        petAge = dogAge * 7; // can't declare varible within if/then statement
+    } else if (type == "cat") {
+        petAge = dogAge * 4;
+    }
+    console.log(petAge);
+   </script>
+   
+   <script>
+        console.log("Hello World"); // comment
+
+        let firstName = "Megan";
+        let age = 21;
+        let isIschool = true;
+        console.log(firstName);
+        console.log(age);
+        console.log(isIschool);
+
+        // multiplication
+        let x = 2 * 2034;
+        console.log(x);
+        console.log(1 == 2); // == means "equals"
+        console.log(0 && 1); // && means "and"
+        console.log(0 || 1); // || means "or"
+        console.log(10 == 20 || 20 == 10)
+    </script>
+
+    <script>
+        let gpa = 3.4;
+        if (gpa >= 3.5) {
+            console.log("You made the dean's list");
+        } else if (gpa < 3.5) {
+            console.log("You did not make the dean's list");
+        }
+    </script>
+</body>
+</html>
