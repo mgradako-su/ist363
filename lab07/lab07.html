@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7</title>
+</head>
+<body>
+    <script>
+    //#1
+    let favNumber = 15;
+    console.log("My favorite number is " + favNumber + ".");
+    </script>
+
+    <script>
+        //#2
+        let favoriteFoods = ["macaroni", "pears", "green beans", "grilled cheese"]
+        console.log(favoriteFoods[1]);
+        favoriteFoods.push("lasagna");
+        console.log(favoriteFoods);
+    </script>
+
+    <script>
+        //#3
+        for (let i = 0; i < favoriteFoods.length; i++) {
+            console.log("Favorite Food " + [i + 1] + ": " + favoriteFoods[i]);
+        }
+    </script>
+
+    <script>
+        //#4
+        for (let i = 0; i < favoriteFoods.length; i++) {
+            if (i != 1) {
+                console.log("Favorite Food " + [i + 1] + ": " + favoriteFoods[i]);
+            };
+        }
+    </script>
+
+    <script>
+        //#5
+        let book = {
+            title: "All the Light We Cannot See",
+            author: "Anthony Doerr",
+            yearPublished: 2018,
+            isAvailable: true
+        };
+        console.log(book.title + ", " + book.author);
+        if (book.isAvailable == true) {
+            console.log("This book is available for checkout.");
+        } else if (book.isAvailable == false) {
+            console.log("Sorry, this book is currently checked out.");
+        }
+    </script>
+
+    <script>
+        //#6
+        let x = 1;
+        while (x <= 20) {
+            if (x % 2 == 0) {
+            console.log(x);
+            }
+        x++;
+        }
+    </script>
+
+    <script>
+        //#7
+        let randomNumber = Math.floor(Math.random() * 6) + 1;
+        console.log(randomNumber);
+    </script>
+</body>
+</html>
