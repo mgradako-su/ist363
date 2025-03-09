@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Notes</title>
+</head>
+<body>
+    <p id="p-one" class="odd">one</p>
+    <p class="even">two</p>
+    <p class="odd">three</p>
+
+    <form id="myForm">
+        <input type="text" name="fname" value="Megan">
+        <input type="text" name="lname" value="Radakovich">
+        <input type="submit" value="send form">
+    </form>
+
+    <p>
+        <button id="myButton">Sign Up</button>
+    </p>
+
+    <script>
+        function dogYears(x) {
+        return 7 * x;
+        }
+
+        let value = dogYears(6);
+        console.log("Age in dog years: " + value);
+
+        // dog years
+        /* let dogAge = 14;
+        let type = "cat";
+        let petAge; // need to define variable before you can use it
+        if (type == "dog") {
+            petAge = dogAge * 7; // can't declare varible within if/then statement
+        } else if (type == "cat") {
+            petAge = dogAge * 4;
+        }
+        console.log(petAge);*/
+
+        //pick by id
+        let picked = document.getElementById("p-one");
+        console.log(picked);
+        
+        console.log("-----------");
+
+        //pick by class and tag -> returns array
+        let oddTags = document.getElementsByClassName("odd");
+        for (i = 0; i < oddTags.length; i++) { //length is a property
+            console.log(oddTags[i]);
+        }
+
+        console.log("-----------");
+
+        let pTags = document.getElementsByTagName("p");
+        for (i = 0; i < pTags.length; i++) { //length is a property
+            console.log(pTags[i]);
+        }
+
+        console.log("-----------");
+
+        //getting element value from a form
+        console.log(document.getElementById("myForm").elements[0].value);
+
+        //changing text and HTML in tags
+        document.getElementById("p-one").innerHTML = "four";
+
+        //change form value
+        document.getElementById("myForm").elements[0].value = "Megdawg";
+
+        //change style elements
+        document.getElementById("p-one").style.color = "red";
+
+        document.getElementById("myButton").addEventListener("click", myFunction);
+        function myFunction() {
+            alert("Hello!");
+        }
+
+       </script>
+</body>
+</html>
