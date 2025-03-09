@@ -53,13 +53,6 @@
             document.getElementById("playbutton").addEventListener("click", playGame);
             function playGame() {
                 animateFireball();
-            }
-
-            let gdamage = Math.floor((Math.random() * 20));
-            let mdamage = Math.floor((Math.random() * 20));
-
-            document.getElementById("playbutton").addEventListener("click", damageCounter);
-            function damageCounter() {
                 document.getElementById("gscore").innerText = (girlpower -= gdamage);
                 document.getElementById("mscore").innerText = (monsterpower -= mdamage);
                 if (girlpower <=0 && monsterpower <= 0) {
@@ -75,6 +68,8 @@
                 }
             }
 
+            let gdamage = Math.floor((Math.random() * 20));
+            let mdamage = Math.floor((Math.random() * 20));
 
             function animateFireball() {
 
