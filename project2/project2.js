@@ -25,7 +25,11 @@ const pickImage = async (keyword) => {
     })
     .then(data => {
         if (data.photos && data.photos.length > 0) {
-            return data.photos[0].src.medium;
+            const photo = data.photos[0];
+            return {
+                imageUrl: photo.src.medium,
+                photographer: photo.photographer
+            };
         } else {
             return Promise.reject('No relevant image found.');
         }
@@ -45,8 +49,8 @@ const showJoke = async () => {
 
 const keyword = data.setup;
     pickImage(keyword)
-    .then(imageUrl => {
-        document.getElementById('image').src = imageUrl;
+    .then(result => {
+        document.getElementById('image').src = result.imageUrl;
     }).catch(err => {
         document.getElementById('image').src = 'https://via.placeholder.com/500';
         console.log(err);
@@ -58,3 +62,12 @@ const keyword = data.setup;
 };
 
 showJoke();
+
+/* const displayPhotographerName = (photographerName) => {
+    const photographerElement = document.getElementById('photographer');
+    photographerElement.textContent = 'Photo by: ' + data.photographer;
+};
+
+const showInfo = async () => {
+    return displayPhotographerName();
+} */

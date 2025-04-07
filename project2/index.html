@@ -82,11 +82,20 @@
         hr {
             color: #2c2c4c;
         }
+        .buttons {
+            display: flex;
+        }
         
         @media only screen and (max-width: 768px) {
         .main-content {
             flex-wrap: wrap;
             }
+        .joke.text {
+            max-width: 90%;
+            }
+        .picture {
+            max-width: 50%;
+        }
         }
     </style>
 </head>
@@ -112,12 +121,13 @@
         </div>
     </div>
         <br>
-        <button class="newjoke" onclick="showJoke()">Get New Joke</button>
-
+        <div class="buttons">
+            <button class="newjoke" onclick="showJoke()">Get New Joke</button>
+            <button class="data" onclick="showInfo()">About the Photographer</button>
+        </div>
+       
     <!-- section featuring at least three data elements in a structured layout -->
-    <div>
-
-    </div>
+    <div id="photographer"></div>
 
     <!-- footer with your name and project information -->
     <br>
