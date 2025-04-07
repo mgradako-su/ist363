@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+</head>
+<body>
+    <h1>Current Weather</h1>
+    <div id="data"></div>
+
+    <script>
+            function reportResults (response) {
+            let browserData = 'NA';
+            if (response != 'error') {
+                const myData = JSON.parse(response);
+
+                /* const temperature = myData.current.temperature_2m;
+                const cloudCover = myData.current.cloud_cover;
+                const precipitation = myData.current.precipitation;*/
+
+                for (i=0; i < myData.length; i++) {
+                    browserData = browserData + myData[i].current.precipitation + '<br>';
+                }
+            }
+            document.getElementById('data').innerHTML = browserData;
+        }
+
+        //console.log(browserData.current.precipitation);
+        
+        endpoint = "https://api.open-meteo.com/v1/forecast?latitude=43.0481&longitude=-76.1474&current=precipitation,temperature_2m,cloud_cover&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch";
+
+        const request = new XMLHttpRequest();
+
+       // step 2 - check status of request
+       request.addEventListener('readystatechange', () => { // listening for state change (request complete)
+            if (request.readyState === 4 && request.status === 200) { // if request is complete and data loaded (200), 
+                console.log(request, request.responseText);           // logging what came back
+                reportResults(request.responseText);
+            } else if (request.readyState === 4) {                    // if finished but not status 200
+                console.log("could not get data");
+                reportResults('error');
+            }
+            //console.log(request, request.readyState);
+        })
+
+       request.open('GET', endpoint);
+       request.send();
+    </script>
+</body>
+</html>
