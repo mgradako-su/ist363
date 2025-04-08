@@ -28,7 +28,7 @@
         h1 {
             padding-left: 10px;
         }
-        a {
+        nav div a {
             display: block;
             color: #ffffff;
             text-align: center;
@@ -37,7 +37,7 @@
             float: left;
             font-size: 16pt;
         }
-        a:hover {
+        nav div a:hover {
             text-decoration: underline;
             cursor: pointer;
         }
@@ -85,6 +85,15 @@
         .buttons {
             display: flex;
         }
+
+        .section3 {
+            text-align: right;
+            margin-right: 25px;
+        }
+
+        .data-structure a {
+            padding-left: 30px;
+        }
         
         @media only screen and (max-width: 768px) {
         .main-content {
@@ -126,11 +135,19 @@
         <br>
         <div class="buttons">
             <button class="newjoke" onclick="showJoke()">Get New Joke</button>
-            <button class="data" onclick="showInfo()">About the Photographer</button>
         </div>
        
     <!-- section featuring at least three data elements in a structured layout -->
-    <div id="photographer"></div>
+    <div class="section3">
+        <h3>About the Photographer</h3>
+        <div class="data-structure">
+            <p>
+                <span id=photographer></span>
+                <a href="" id="photographerurl">View More Work</a>
+                <a href="" id="photourl">View Photo Here</a>
+            </p>
+        </div>
+    </div>
 
     <!-- footer with your name and project information -->
     <br>
