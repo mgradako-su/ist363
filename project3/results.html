@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 - Results</title>
+    <style>
+        img {
+            max-width: 100px;
+        }
+        header img {
+            padding: 20px;
+        }
+        .socials img {
+            width: 60px;
+        }
+        header, .footer-text {
+            display: flex;
+            justify-content: space-between;
+        }
+        header {
+            background-color: #B32F25;
+            color: #ffffff;
+            width: 100%;
+        }
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        nav {
+            margin-top: 30px;
+            margin-right: 30px;
+        }
+        .main {
+            margin-left: 300px;
+            margin-right: 300px;
+            display: flex;
+        }
+        button {
+            max-height: 40px;
+            margin-top: 120px;
+            margin-right: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            border: none;
+            width: 100px;
+        }
+        .game {
+            display: flex;
+            background-color: #B32F25;
+            color: #ffffff;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            width: 400px;
+        }
+        .game p {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        h2 {
+            margin-top: 50px;
+        }
+        .report {
+            margin-left: 100px;
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            margin: 10px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="website/logo.png" alt="Syracuse Ultimate">
+        <nav>
+            <a>SCHEDULE</a><span>  |</span>
+            <a>RESULTS</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="results">
+            <h2>Results</h2>
+            <div class="game">
+                <p>vs. Vassar<br>Final Score: 12 - 8<br>Winner: Syracuse</p>
+            </div>
+            <div class="game">
+                <p>vs. Binghamton<br>Final Score: 10 - 6<br>Winner: Binghamton</p>
+            </div>
+            <div class="game">
+                <p>vs. Cornell<br>Final Score: 13 - 2<br>Winner: Cornell</p>
+            </div>
+        </div>
+        <div class="report">
+            <h2>Report</h2>
+            <form action="">
+                <input type="text" id="team" name="team" value="Team played">
+                <input type="text" id="tournament" name="tournament" value="Tournament"><br>
+                <input type="text" id="score" name="score" value="Final Score"><br>
+                <textarea name="message" rows="10" cols="30">Additional notes about the game</textarea><br>
+                <input type="submit" value="Submit">
+              </form> 
+        </div>
+    </div>
+
+    <footer>
+        <hr>
+        <div class="footer-text">
+            <p>&copy; Megan Radakovich 2025</p>
+            <img class="logo" src="website/logo.png" alt="Syracuse Ultimate">
+            <div class="socials">
+                <img class="insta" src="website/insta.png" alt="Instagram icon">
+                <img class="email" src="website/email.png" alt="email icon">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

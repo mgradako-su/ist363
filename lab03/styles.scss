@@ -31,6 +31,10 @@ header {
     padding: 30px;
 }
 
+img {
+    width: 100px;
+}
+
 h2 {
     color: $heading-color;
     @include typestyle;
