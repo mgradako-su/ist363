@@ -1,7 +1,7 @@
 // Lab 11
 
 import { useState } from "react";
-import './App.css';
+import '/App.css';
 
 const givenTodos = [
   { id: 1, task: 'Complete Lab 11', status: 'incomplete' },
